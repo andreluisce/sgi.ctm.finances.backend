@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "./src/loader.js",
+   "engines": {
+    "node": "6.7.0", 
+    "npm": "3.10.3"
+  },
   "scripts": {
     "dev": "nodemon", 
-    "production": "pm2 start src/loader.js --name sgi.ctm.finances"
+    "production": "pm2 start src/loader.js --name sgi.ctm.finances", 
+    "start": "npm run production"
   },
   "keywords": [],
   "author": "",
