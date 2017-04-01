@@ -9,8 +9,8 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "production": "pm2 start src/loader.js --name sgi.ctm.finances",
-    "start": "npm run dev"
+    "production": "pm2 start ./src/loader.js --name sgi.ctm.finances",
+    "start": "node ./src/loader.js"
   },
   "keywords": [],
   "author": "",
