@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "nodemon",
     "production": "pm2 start src/loader.js --name sgi.ctm.finances",
-    "start": "npm run production"
+    "start": "npm run dev"
   },
   "keywords": [],
   "author": "",
