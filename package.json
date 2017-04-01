@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "./src/loader.js",
-   "engines": {
-    "node": "6.7.0", 
+  "engines": {
+    "node": "6.7.0",
     "npm": "3.10.3"
   },
   "scripts": {
-    "dev": "nodemon", 
-    "production": "pm2 start src/loader.js --name sgi.ctm.finances", 
+    "dev": "nodemon",
+    "production": "pm2 start src/loader.js --name sgi.ctm.finances",
     "start": "npm run production"
   },
   "keywords": [],
@@ -24,8 +24,8 @@
     "mongoose-paginate": "^5.0.3",
     "node-restful": "^0.2.5",
     "pm2": "^2.1.5"
-  }, 
+  },
   "devDependencies": {
-    "nodemon" : "*"
+    "nodemon": "*"
   }
 }
