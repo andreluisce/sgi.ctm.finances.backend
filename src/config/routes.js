@@ -5,7 +5,7 @@ module.exports = function (server) {
     server.set('port', process.env.PORT || 8080);
 
     const router = express.Router()
-    server.use('/api/finances', router)
+    server.use('/api', router)
 
     //Rotas de Servicos
     const Servicos = require('../api/services/servicosService')
