@@ -4,44 +4,57 @@ const mongoose = restful.mongoose
 const servicosSchema = new mongoose.Schema({
     nome: {
         type: String,
-        require: true
+        require: true,
+        trim: true
     },
     ativo: {
         type: String,
         enum: ['FORNECEDOR', 'PRESTADOR_SERVICO', 'CLIENTE']
     },
-    cnpj: {
-        type: Number
+    cpx: { //CNPJ ou CPF
+        type: Number,
+        trim: true,
+        index : {unique: true}
     },
-    cpf: {
-        type: Number
+    tipo: {
+        type: String,
+        enum: ['PESSOA_FISICA', 'PESSOA_JURIDICA']
     },
     telefone: {
-        type: Number
+        type: Number,
+        trim: true
     },
     email: {
-        type: String
+        type: String,
+        trim: true
     },
     endereco: {
-        type: String
+        type: String,
+        trim: true
     },
     numero: {
-        type: Number
+        type: Number,
+        trim: true
     },
     complemento: {
-        type: String
+        type: String,
+        trim: true
     },
     cep: {
-        type: Number
+        type: Number,
+        trim: true
     },
     bairro: {
-        type: String
+        type: String,
+        trim: true
     },
     cidade: {
-        type: String
+        type: String,
+        trim: true
     },
     estado: {
-        type: String
+        type: String,
+        trim: true
     }
 })
 

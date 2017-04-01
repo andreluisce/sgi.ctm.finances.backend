@@ -16,7 +16,8 @@ const lancamentosTitulosSchema = new mongoose.Schema({
         ref: 'Servicos'
     },
     historico: {
-        type: String
+        type: String,
+        trim: true
     },
     natureza: {
         type: String,

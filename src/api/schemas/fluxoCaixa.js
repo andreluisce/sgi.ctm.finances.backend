@@ -3,14 +3,14 @@ const mongoose = restful.mongoose
 
 //Fluxo de Caixa usado para Despesas e Receitas
 const fluxoCaixaSchema = new mongoose.Schema({
-    comprovante: {
+    comprovante: { //This is URL of the Receipt image
         type: String
     },
     valor: {
         type: Number
     },
     data: {
-        type: Number
+        type: Date
     },
     conta: {
         type: mongoose.Schema.Types.ObjectId,
@@ -21,7 +21,8 @@ const fluxoCaixaSchema = new mongoose.Schema({
         ref: 'Servicos'
     },
     historico: {
-        type: String
+        type: String,
+        trim: true
     },
         natureza: {
         type: String,

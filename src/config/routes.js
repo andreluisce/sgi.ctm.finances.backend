@@ -11,9 +11,9 @@ module.exports = function (server) {
     const Servicos = require('../api/services/servicosService')
     Servicos.register(router, '/servicos')
 
-    //Rotas de Carteiras
-    const Carteiras = require('../api/services/carteirasService')
-    Carteiras.register(router, '/carteiras')
+    //Rotas de contas
+    const Contas = require('../api/services/contasService')
+    Contas.register(router, '/contas')
 
     //Rotas de Receitas
     const Receitas = require('../api/services/fluxoCaixaService')
