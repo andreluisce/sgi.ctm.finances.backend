@@ -7,18 +7,22 @@ const fluxoCaixaSchema = new mongoose.Schema({
         type: String
     },
     valor: {
-        type: Number
+        type: Number,
+        required: true
     },
     data: {
-        type: Date
+        type: Date,
+        required: true
     },
     conta: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Carteira'
+        ref: 'Carteira',
+        required: true
     },
     nomeServico: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Servicos'
+        ref: 'Servicos',
+        required: true
     },
     historico: {
         type: String,
@@ -26,7 +30,8 @@ const fluxoCaixaSchema = new mongoose.Schema({
     },
         natureza: {
         type: String,
-        enum: ['RECEITA', 'DESPESA']
+        enum: ['RECEITA', 'DESPESA'],
+        required: true
     }
 })
 

@@ -6,14 +6,16 @@ const lancamentosTitulosSchema = new mongoose.Schema({
         type: Number
     },
     data: {
-        type: Date
+        type: Date,
+        required: true
     },
     vencimento: {
         type: Date
     },
     nomeServico: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Servicos'
+        ref: 'Servicos',
+        required: true
     },
     historico: {
         type: String,
@@ -21,7 +23,8 @@ const lancamentosTitulosSchema = new mongoose.Schema({
     },
     natureza: {
         type: String,
-        enum: ['PAGAR', 'RECEBER']
+        enum: ['PAGAR', 'RECEBER'],
+        required: true
     }
 })
 

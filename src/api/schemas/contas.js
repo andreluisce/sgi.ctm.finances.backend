@@ -4,15 +4,17 @@ const mongoose = restful.mongoose
 const contasSchema = new mongoose.Schema({
     banco: {
         type: String,
-        require: true,
+        required: true,
         trim: true
     },
     nomeConta: {
         type: String,
+        required: true,
         trim: true
     },
     saldo: {
-        type: Number
+        type: Number,
+        required: true
     }
 })
 
