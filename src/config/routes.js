@@ -2,7 +2,7 @@ const express = require('express')
 
 module.exports = function (server) {
 
-server.set('port', process.env.PORT || 8080);
+    server.set('port', process.env.PORT || 8080);
 
     const router = express.Router()
     server.use('/api', router)
@@ -19,7 +19,7 @@ server.set('port', process.env.PORT || 8080);
     const Receitas = require('../api/services/fluxoCaixaService')
     Receitas.register(router, '/fluxocaixa')
 
-        //Rotas de LancamentoTitulo
+    //Rotas de LancamentoTitulo
     const LancamentoTitulo = require('../api/services/lancamentoTituloService')
     LancamentoTitulo.register(router, '/lancamentotitulo')
 
