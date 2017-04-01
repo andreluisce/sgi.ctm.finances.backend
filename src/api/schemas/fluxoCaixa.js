@@ -14,7 +14,7 @@ const fluxoCaixaSchema = new mongoose.Schema({
     },
     conta: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Carteiras'
+        ref: 'Carteira'
     },
     nomeServico: {
         type: mongoose.Schema.Types.ObjectId,
