@@ -16,8 +16,8 @@ module.exports = function (server) {
     Contas.register(router, '/contas')
 
     //Rotas de Receitas
-    const Receitas = require('../api/services/fluxoCaixaService')
-    Receitas.register(router, '/fluxocaixa')
+    const FluxoCaixa = require('../api/services/fluxoCaixaService')
+    FluxoCaixa.register(router, '/fluxocaixa')
 
     //Rotas de LancamentoTitulo
     const LancamentoTitulo = require('../api/services/lancamentoTituloService')
